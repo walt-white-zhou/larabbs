@@ -162,7 +162,7 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../larabbs-weapp" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -194,7 +194,8 @@
       <updated>1590457781105</updated>
       <workItem from="1590457782288" duration="8000" />
       <workItem from="1590457802016" duration="9358000" />
-      <workItem from="1590547639483" duration="4039000" />
+      <workItem from="1590547639483" duration="5377000" />
+      <workItem from="1590629112040" duration="2000000" />
     </task>
     <servers />
   </component>
