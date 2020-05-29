@@ -13,6 +13,11 @@ class Topic extends Model
         return $this->hasMany(Reply::class);
     }
 
+    public function topReplies()
+    {
+        return $this->replies()->limit(5);
+    }
+
     public function category()
     {
         return $this->belongsTo(Category::class);
@@ -27,13 +32,13 @@ class Topic extends Model
     {
         // 不同的排序，使用不同的数据读取逻辑
         switch ($order) {
-        case 'recent':
-            $query->recent();
-            break;
+            case 'recent':
+                $query->recent();
+                break;
 
-        default:
-            $query->recentReplied();
-            break;
+            default:
+                $query->recentReplied();
+                break;
         }
     }
 
