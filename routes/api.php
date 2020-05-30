@@ -95,13 +95,13 @@ Route::prefix('v1')
                     // 上传图片
                     Route::post('images', 'ImagesController@store')
                         ->name('images.store');
+                    // 发布回复
+                    Route::post('topics/{topic}/replies', 'RepliesController@store')
+                        ->name('topics.replies.store');
                     // 发布话题
                     Route::resource('topics', 'TopicsController')->only([
                         'store', 'update', 'destroy'
                     ]);
-                    // 发布回复
-                    Route::post('topics/{topic}/replies', 'RepliesController@store')
-                        ->name('topics.replies.store');
                     // 删除回复
                     Route::delete('topics/{topic}/replies/{reply}', 'RepliesController@destroy')
                         ->name('topics.replies.destroy');
@@ -114,6 +114,8 @@ Route::prefix('v1')
                     // 标记消息通知为已读
                     Route::patch('user/read/notifications', 'NotificationsController@read')
                         ->name('user.notifications.read');
+                    Route::put('user/read/notifications', 'NotificationsController@read')
+                        ->name('user.notifications.read.put');
                     // 当前登录用户权限
                     Route::get('user/permissions', 'PermissionsController@index')
                         ->name('user.permissions.index');
